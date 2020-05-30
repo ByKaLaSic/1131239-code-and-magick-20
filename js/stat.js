@@ -30,7 +30,6 @@ var getMaxElement = function (arr) {
 };
 
 var winningText = function (ctx, text) {
-  ctx.font = '16px PT Mono';
   var lineCounter = 1.5;
 
   for (var j = 0; j < text.length; j++) {
@@ -45,6 +44,7 @@ window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, CLOUD_X + GAP, CLOUD_Y + GAP, 'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx, CLOUD_X, CLOUD_Y, '#fff');
 
+  ctx.font = '16px PT Mono';
   ctx.fillStyle = '#000';
 
   winningText(ctx, winningPhrase);
