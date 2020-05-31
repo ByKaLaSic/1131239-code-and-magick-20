@@ -59,7 +59,7 @@ window.renderStatistics = function (ctx, players, times) {
     if (players[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
-      ctx.fillStyle = 'hsl(240, 100%, 30%)';
+      ctx.fillStyle = 'hsl(235, ' + i * 25 + '% , 30%)';
     }
 
     ctx.fillRect(leftColumnGap, CLOUD_Y + TIME_GAP + timeLeft + FONT_GAP + GAP, BAR_WIDTH, barHeight);
