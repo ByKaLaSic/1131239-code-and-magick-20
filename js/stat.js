@@ -47,7 +47,11 @@ window.renderStatistics = function (ctx, players, times) {
     if (players[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
-      ctx.fillStyle = 'hsl(235, ' + i * 25 + '% , 30%)';
+      var hue = '240';
+      var saturation = Math.floor(Math.random() * 100);
+      var lightness = '50';
+      var color = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
+      ctx.fillStyle = color;
     }
 
     ctx.fillRect(leftColumnGap, CLOUD_Y + TIME_GAP + timeLeft + FONT_GAP + GAP, BAR_WIDTH, barHeight);
