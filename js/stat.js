@@ -17,18 +17,6 @@ var renderCloud = function (ctx, x, y, color) {
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
 
-var getMaxElement = function (arr) {
-  var maxElement = arr[0];
-
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > maxElement) {
-      maxElement = arr[i];
-    }
-  }
-
-  return maxElement;
-};
-
 var winningText = function (ctx, text) {
   var lineCounter = 1.5;
 
@@ -49,7 +37,7 @@ window.renderStatistics = function (ctx, players, times) {
 
   winningText(ctx, winningPhrase);
 
-  var maxTime = getMaxElement(times);
+  var maxTime = Math.max.apply(null, times);
 
   for (var i = 0; i < players.length; i++) {
     var barHeight = MAX_BAR_HEIGHT * times[i] / maxTime;
