@@ -1,12 +1,11 @@
 'use strict';
 
 var wizardsFragment = document.createDocumentFragment();
-var setupSimilar = document.querySelector('.setup-similar');
-setupSimilar.classList.remove('hidden');
 var wizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 var setupList = document.querySelector('.setup-similar-list');
 var setup = document.querySelector('.setup');
 setup.classList.remove('hidden');
+document.querySelector('.setup-similar').classList.remove('hidden');
 
 var WIZARD_NAMES = [
   'Иван',
